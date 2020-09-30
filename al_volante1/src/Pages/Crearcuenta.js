@@ -10,8 +10,8 @@ const cookies = new Cookies();
 class Crearcuenta extends Component {
     state = {
         form: {
-            username: '',
-            apellidos: '',
+            username: '', //Nombre: Brayan, Apellidos: Suárez Restrepo, Correo: brayanrepo2015@gmail.com contraseña: 123456789
+            apellidos: '', //Nombre: Yereimi, Apellidos: Sanchez Rodas, Correo: Yereimisanchez@gmail.com contraseña: 12345
             correo: '',
             password: '',
         }

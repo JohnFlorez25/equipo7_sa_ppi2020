@@ -11,8 +11,8 @@ const cookies=new Cookies();
 class Inicio extends Component {
     state = {
         form: {
-            username: '',
-            password: ''
+            username: '', //Correo: brayan repo2015@gmail.com contraseña: 123456789 
+            password: ''//Correo: Yereimisanchez@gmail.com contraseña: 12345
         }
     }
     handleChange = async e => {
