@@ -1,0 +1,113 @@
+.title{
+    text-align: center;
+    font-size: 40px;
+    transform:  translate(0%, 3%);
+    font-family: "Bree Serif"; 
+    color: #070707;
+}
+.Normasdeconduccion{
+    background-image: url("../Normasdeconduccion.png");
+    background-repeat:no-repeat;
+    height:200px;
+    width:150px;
+    background-position:center;
+    transform:  translate(-90%, 0%);
+    border-color: rgb(5, 5, 5);
+    
+}
+.Señalesdetransito{
+    background-image: url("../Señalesdetransito.png");
+    background-repeat:no-repeat;
+    height:200px;
+    width:150px;
+    background-position:center;
+    transform:  translate(90%, -107%);
+    border-color: rgb(5, 5, 5);
+}
+.Menu{
+    background-image: url("../imagenes/inicio.png");
+    background-repeat:no-repeat;
+    height:100px;
+    width:70px;
+    background-position:center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transform:  translate(-300%, -110%);
+    border-color: rgb(5, 5, 5);
+}
+.Trofeos{
+    background-image: url("../imagenes/trofeos.png");
+    background-repeat:no-repeat;
+    height:100px;
+    width:70px;
+    background-position:center;
+    transform:  translate(-200%, -234%);
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-color: rgb(5, 5, 5);
+    
+}
+.Raking{
+    background-image: url("../imagenes/ranking.png");
+    background-repeat:no-repeat;
+    height:100px;
+    width:70px;
+    background-position:center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transform:  translate(-100%, -358%);
+    border-color: rgb(5, 5, 5);
+}
+.Perfil{
+    background-image: url("../imagenes/Perfil.png");
+    background-repeat:no-repeat;
+    height:100px;
+    width:69px;
+    background-position:center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transform:  translate(-3%, -482%);
+    border-color: rgb(5, 5, 5);
+}
+.Donaciones{
+    background-image: url("../imagenes/donaciones.png");
+    background-repeat:no-repeat;
+    height:100px;
+    width:65px;
+    background-position:center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transform:  translate(100%, -606%);
+    border-color: rgb(5, 5, 5);
+}
+.Busqueda{
+    background-image: url("../imagenes/busquedas.png");
+    background-repeat:no-repeat;
+    height:100px;
+    width:68px;
+    background-position:center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transform:  translate(194%, -730%);
+    border-color: rgb(5, 5, 5);
+}
+.Cerrarsesion{
+    background-repeat:no-repeat;
+    background-position:center;
+    transform:  translate(0%, -1000%);
+}
+.Barramenu{
+    transform:  translate(5%, -5%);
+}
