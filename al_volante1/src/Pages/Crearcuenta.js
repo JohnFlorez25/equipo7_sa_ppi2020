@@ -104,8 +104,9 @@ class Crearcuenta extends Component {
                             onChange={this.handleChange} />
                         <br />
                         <button className="btn btn-primary" onClick={() => this.pantallaprincipal()} >CREAR CUENTA</button>
-                        <br />
+                        <div className="Registrarse">
                         <button className="btn btn-primary" onClick={() => this.inicio()}>REGRESAR</button>
+                        </div>
                     </div>
                 </div>
             </div>

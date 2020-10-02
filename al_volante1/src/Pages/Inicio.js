@@ -83,9 +83,11 @@ class Inicio extends Component {
                             name="contraseña"
                             onChange={this.handleChange} />
                         <br />
+                        
                         <button className="btn btn-primary" onClick={() => this.iniciarSesion()}>ENTRAR</button>
-                        <br />
+                        <div className="Registrarse">
                         <button className="btn btn-primary" onClick={()=> this.crearcuenta()}>CREAR CUENTA</button>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -18,6 +18,9 @@ class Pantallaprincipal extends Component {
             window.location.href="./Inicio"; 
         }
     }
+    Normasdeconduccion=()=>{
+        window.location.href="./Normasconduccion"; 
+    }
     render() {
         console.log('id: '+cookies.get('id'));
         console.log('apellidos: ' +cookies.get('apellido_Paterno'));
@@ -32,7 +35,7 @@ class Pantallaprincipal extends Component {
             <p>¡ESCOGE EL TIPO</p> 
             <p>DE JUEGO!</p>
             <br/>
-           <button className="Normasdeconduccion"></button>
+            <button className="Normasdeconduccion" onClick={()=>this.Normasdeconduccion()}></button>
             <br/>
             <button className="Señalesdetransito"></button>
             <br/>
