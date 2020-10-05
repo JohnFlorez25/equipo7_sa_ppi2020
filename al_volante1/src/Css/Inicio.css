@@ -6,6 +6,7 @@
     border: 1px solid blue;
     padding: 40px;
     background-color: white;
+
 }
 .containerSecundario{
     text-align: center;
@@ -16,7 +17,7 @@
     min-height: 100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
+
 }
 .Registrarse{
     transform:  translate(0px, 15px);

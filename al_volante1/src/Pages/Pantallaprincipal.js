@@ -21,6 +21,15 @@ class Pantallaprincipal extends Component {
     Normasdeconduccion=()=>{
         window.location.href="./Normasconduccion"; 
     }
+    Señalestransito=()=>{
+        window.location.href="./Señalestransito"; 
+    }
+    Pantallaprincipal=()=>{
+        window.location.href="./Pantallaprincipal"; 
+    }
+    Trofeos=()=>{
+        window.location.href="./Trofeos"; 
+    }
     render() {
         console.log('id: '+cookies.get('id'));
         console.log('apellidos: ' +cookies.get('apellido_Paterno'));
@@ -37,12 +46,12 @@ class Pantallaprincipal extends Component {
             <br/>
             <button className="Normasdeconduccion" onClick={()=>this.Normasdeconduccion()}></button>
             <br/>
-            <button className="Señalesdetransito"></button>
+            <button className="Señalesdetransito" onClick={()=>this.Señalestransito()}></button>
             <br/>
             <div className="Barramenu">
-            <button className="Menu"></button>
+            <button className="Menu" onClick={()=>this.Pantallaprincipal()}></button>
             <br/>
-            <button className="Trofeos"></button>
+            <button className="Trofeos" onClick={()=>this.Trofeos()}></button>
             <br/>
             <button className="Raking"></button>
             <br/>

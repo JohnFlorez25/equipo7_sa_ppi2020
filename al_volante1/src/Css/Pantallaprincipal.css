@@ -13,7 +13,7 @@
     background-position:center;
     transform:  translate(-90%, 0%);
     border-color: rgb(5, 5, 5);
-    
+
 }
 .Señalesdetransito{
     background-image: url("../Señalesdetransito.png");
@@ -100,7 +100,7 @@
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    transform:  translate(194%, -730%);
+    transform:  translate(193%, -730%);
     border-color: rgb(5, 5, 5);
 }
 .Cerrarsesion{
