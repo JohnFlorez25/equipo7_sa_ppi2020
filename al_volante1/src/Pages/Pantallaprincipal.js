@@ -30,6 +30,17 @@ class Pantallaprincipal extends Component {
     Trofeos=()=>{
         window.location.href="./Trofeos"; 
     }
+    Raking=()=>{
+        window.location.href="./Raking"; 
+    }
+    Perfil=()=>{
+        window.location.href="./Perfil"; 
+
+    }
+    Donaciones=()=>{
+        window.location.href="./Donaciones"; 
+
+    }
     render() {
         console.log('id: '+cookies.get('id'));
         console.log('apellidos: ' +cookies.get('apellido_Paterno'));
@@ -53,13 +64,13 @@ class Pantallaprincipal extends Component {
             <br/>
             <button className="Trofeos" onClick={()=>this.Trofeos()}></button>
             <br/>
-            <button className="Raking"></button>
+            <button className="Raking" onClick={()=>this.Raking()}></button>
             <br/>
-            <button className="Perfil"></button>
+            <button className="Perfil" onClick={()=>this.Perfil()}></button>
             <br/>
-            <button className="Donaciones"></button>
+            <button className="Donaciones" onClick={()=>this.Donaciones()}></button>
             <br/>
-            <button className="Busqueda"></button>
+            <button className="Busqueda" ></button>
             <br/>
             </div>
             <button className="Cerrarsesion" onClick={()=>this.CerrarSesion()}>Cerrar Sesion</button>

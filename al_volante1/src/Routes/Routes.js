@@ -7,6 +7,9 @@ import Crearcuenta from '../Pages/Crearcuenta';
 import Normasconduccion from '../Pages/Normasconduccion';
 import Señalestransito from '../Pages/Señalestransito';
 import Trofeos from '../Pages/Trofeos';
+import Raking from '../Pages/Raking';
+import Perfil from '../Pages/Perfil';
+import Donaciones from '../Pages/Perfil'; 
 function Routes(){
     return(
         <BrowserRouter>
@@ -18,6 +21,10 @@ function Routes(){
             <Route exact path="/Normasconduccion" component={Normasconduccion}/>
             <Route exact path="/Señalestransito" component={Señalestransito}/>
             <Route exact path="/Trofeos" component={Trofeos}/>
+            <Route exact path="/Raking" component={Raking}/>
+            <Route exact path="/Perfil" component={Perfil}/>
+            <Route exact path="/Donaciones" component={Donaciones}/>
+
         </Switch>
         </BrowserRouter>
     );

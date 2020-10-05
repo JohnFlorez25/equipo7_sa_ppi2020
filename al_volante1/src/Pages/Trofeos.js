@@ -5,9 +5,7 @@ class Trofeos extends Component {
     render() {   
         return (
             <div>
-            <p>¡ESCOGE EL TIPO</p> 
-            <p>DE JUEGO!</p>
-   
+            <p>TROFEOS</p> 
             </div>
         );
     }
