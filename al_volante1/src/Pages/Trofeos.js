@@ -30,11 +30,36 @@ class Trofeos extends Component {
             
             
             <div className="Trofeo1"> 
-            <p>¡SE EL PRIMERO!
+            <p className="texto1">¡SE EL PRIMERO!
             <br/>
-            Se obtiene al ganar el primer
+            Se obtiene al ganar el primer puesto
+            </p>
+            </div>
             <br/>
-             puesto
+            <div className="Trofeo2"> 
+            <p>¡Game Over!
+            <br/>
+            Se obtiene por haber terminado el modo
+            <br/>
+             de jugar "Normas de conducción"
+            </p>
+            </div>
+            <br/>
+            <div className="Trofeo3"> 
+            <p>¡Alma Generosa!
+            <br/>
+            Se obtiene por haberles donado dinero
+            <br/>
+            a los creadores de Al Volante
+            </p>
+            </div>
+            <br/>
+            <div className="Trofeo4"> 
+            <p>¡Alto Ahí!
+            <br/>
+            Se obtiene por haber terminado el modo    
+            <br/>
+            de jugar "señales de transito"
             </p>
             </div>
             <br/>

@@ -1,20 +1,77 @@
 .title{
     font-size: 40px;
+    transform:  translate(0%, 4%);
 }
+.Trofeo1 p{
+    
+    border-top:solid 1px grey;
+    text-align: center;
+    width: 600px;
+    padding: -15px;
+    
+  }
 .Barra{
-    transform:  translate(5%, 25%);
+    transform:  translate(5%, -20%);
 }
 .Trofeo1{
+    
     background-image: url("../imagenes/trofeo1.png");
-    transform:  translate(9%, -45%);
+    transform:  translate(9%, -70%);
     height:100px;
     width:102px;
     border-radius: 45px;
     font-size: 25px;
+    background-position: center;
 }
-p{
-    
+.Trofeo2{
+    background-image: url("../imagenes/trofeo2.png");
+    transform:  translate(9%, -135%);
+    height:100px;
+    width:102px;
+    border-radius: 20px;
+    font-size: 25px;
+    background-position-y: -40%;
+    background-position-x: 50%;
+}
+
+.Trofeo2 p{
+    transform:  translate(0%, -5%);
     text-align: center;
     width: 600px;
     padding: -15px;
+    
+  }
+.Trofeo3{
+    background-image: url("../imagenes/trofeo3.png");
+    transform:  translate(9%, -170%);
+    height:100px;
+    width:102px;
+    border-radius: 45px;
+    font-size: 25px;
+    background-position-y: 0%;
+    background-position-x: 50%;
 }
+.Trofeo3 p{
+    transform:  translate(0%, -10%);
+    text-align: center;
+    width: 600px;
+    padding: -15px;
+    
+  }
+.Trofeo4{
+    background-image: url("../imagenes/trofeo4.png");
+    transform:  translate(9%, -200%);
+    height:100px;
+    width:102px;
+    border-radius: 45px;
+    font-size: 25px;
+    background-position: center;
+
+}
+.Trofeo4 p{
+    transform:  translate(0%, -10%);
+    text-align: center;
+    width: 600px;
+    padding: -15px;
+    
+  }

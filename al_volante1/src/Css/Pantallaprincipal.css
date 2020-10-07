@@ -35,6 +35,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     transform:  translate(-300%, -110%);
+    
     border-color: rgb(5, 5, 5);
 }
 .Trofeos{
@@ -109,5 +110,5 @@
     transform:  translate(0%, -1000%);
 }
 .Barramenu{
-    transform:  translate(5%, -5%);
+    transform:  translate(5%, -1%);
 }

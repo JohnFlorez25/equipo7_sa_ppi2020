@@ -1,0 +1,29 @@
+.Menu1{
+    transform:  translate(5%, 48%);
+}
+.perfil{
+    background-image: url("../imagenes/Perfil1.png");
+    transform:  translate(30%, -70%);
+    height:70px;
+    width:72px;
+    border-radius: 50px;
+    font-size: 25px;
+    background-position: center;
+}   
+.perfil p{
+    border-top:solid 2px grey;
+    line-height: normal ;
+    text-align: center;
+    width: 600px;
+    padding: -15px;
+
+}
+.Trofeo5{
+    background-image: url("../imagenes/trofeo5.png");
+    transform:  translate(750%, -260%);
+    height:40px;
+    width:60px;
+    border-radius: 50px;
+    font-size: 25px;
+    background-position: center;
+}

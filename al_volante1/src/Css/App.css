@@ -31,8 +31,7 @@
     border-radius: 15px;
     border: none;
     box-shadow: 0 9px #999;
-   
-    cursor: pointer;
+
   }
   .Boton:active {
     background-color: #A90C62;
