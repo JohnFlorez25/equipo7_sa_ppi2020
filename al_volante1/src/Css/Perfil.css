@@ -1,0 +1,35 @@
+.Menu1{
+    transform:  translate(5%, 48%);
+}
+.perfil1{
+    border-top:solid 2px grey;
+    transform:  translate(0%, -100%);
+    
+} 
+.perfil2{
+    background-image: url("../imagenes/Perfil1.png");
+    transform:  translate(300%, 0%);
+    height:70px;
+    width:72px;
+    border-radius: 50px;
+    font-size: 25px;
+    background-position: center;
+}   
+
+
+.perfil3{
+    border-radius: 50px; 
+    transform:  translate(-30%,200%);
+    width:350%;
+    text-align: center;
+    font-size: 20px;
+    outline: none;
+
+}
+.Cerrarsesion{
+    transform:  translate(-25%,-2930%);
+    border-radius: 50px;
+    font-size: 20px;
+    outline: none;
+
+}

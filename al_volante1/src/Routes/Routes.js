@@ -9,7 +9,9 @@ import Señalestransito from '../Pages/Señalestransito';
 import Trofeos from '../Pages/Trofeos';
 import Raking from '../Pages/Raking';
 import Perfil from '../Pages/Perfil';
-import Donaciones from '../Pages/Perfil'; 
+/*import Donaciones from '../Pages/Donaciones';             <Route exact path="/Donaciones" component={Donaciones}/>
+<Route exact path="/Donaciones" component={Donaciones}/>
+*/
 function Routes(){
     return(
         <BrowserRouter>
@@ -23,7 +25,6 @@ function Routes(){
             <Route exact path="/Trofeos" component={Trofeos}/>
             <Route exact path="/Raking" component={Raking}/>
             <Route exact path="/Perfil" component={Perfil}/>
-            <Route exact path="/Donaciones" component={Donaciones}/>
 
         </Switch>
         </BrowserRouter>

@@ -3,16 +3,7 @@ import Cookies from 'universal-cookie';
 import '../Css/Pantallaprincipal.css'; 
 const cookies = new Cookies();
 class Pantallaprincipal extends Component {
-    CerrarSesion=()=>{
-        cookies.remove('id', {path: "/"});
-        cookies.remove('apellidos', {path: "/"});
-        cookies.remove('nombre ', {path: "/"});
-        cookies.remove('correo ', {path: "/"});
-        cookies.remove('username ', {path: "/"});
-        cookies.remove('contraseña ', {path: "/"});
-
-        window.location.href='./Inicio'; 
-    }
+    
     componentDidMount(){
         if(!cookies.get('correo' && 'contraseña')){
             window.location.href="./Inicio"; 
@@ -38,7 +29,11 @@ class Pantallaprincipal extends Component {
 
     }
     Donaciones=()=>{
-        window.location.href="./Donaciones"; 
+        alert('En construcción');
+
+    }
+    Busqueda=()=>{
+        alert('En construcción');
 
     }
     render() {
@@ -70,11 +65,10 @@ class Pantallaprincipal extends Component {
             <br/>
             <button className="Donaciones" onClick={()=>this.Donaciones()}></button>
             <br/>
-            <button className="Busqueda" ></button>
+            <button className="Busqueda" onClick={()=>this.Busqueda()}></button>
             <br/>
             </div>
-            <button className="Cerrarsesion" onClick={()=>this.CerrarSesion()}>Cerrar Sesion</button>
-            <br/>
+            
             </div>
             </header>
 

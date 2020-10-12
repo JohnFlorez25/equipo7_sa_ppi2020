@@ -18,7 +18,11 @@ class Trofeos extends Component {
 
     }
     Donaciones=()=>{
-        window.location.href="./Donaciones"; 
+        alert('En construcción');
+
+    }
+    Busqueda=()=>{
+        alert('En construcción');
 
     }
     render() {
@@ -47,7 +51,7 @@ class Trofeos extends Component {
             <br/>
             <button className="Donaciones" onClick={()=>this.Donaciones()}></button>
             <br/>
-            <button className="Busqueda" ></button>
+            <button className="Busqueda" onClick={() => this.Busqueda()}></button>
             <br/>
             </div>
             </div>
