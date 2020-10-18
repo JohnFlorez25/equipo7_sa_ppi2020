@@ -18,7 +18,7 @@ function Routes(){
         <Switch>
             <Route exact path="/" component={App}/>; 
             <Route exact path="/Inicio"component={Inicio}/>
-            <Route exact path="/Pantallaprincipal" component={Pantallaprincipal}/>
+            <Route exact path="/Pantallaprincipal/" component={Pantallaprincipal}/>
             <Route exact path="/Crearcuenta" component={Crearcuenta}/>
             <Route exact path="/Normasconduccion" component={Normasconduccion}/>
             <Route exact path="/Señalestransito" component={Señalestransito}/>
