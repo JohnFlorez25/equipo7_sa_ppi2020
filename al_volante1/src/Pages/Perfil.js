@@ -30,7 +30,7 @@ class Perfil extends Component {
 
     }
     Donaciones=()=>{
-        alert('En construcción');
+        window.location.href="./Donaciones"; 
 
     }
     Busqueda=()=>{
