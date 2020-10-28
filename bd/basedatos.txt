@@ -1,0 +1,49 @@
+CREATE DATABASE Al_Volante;
+CREATE TABLE usuario ( 
+    Id_Usuario VARCHAR(50) NOT NULL , 
+    Id_Contrasena VARCHAR(50) NOT NULL , 
+    Id_Correo VARCHAR(50) NOT NULL , 
+    PRIMARY KEY (Id_Usuario)
+);
+CREATE TABLE Donardinero (
+    Donardinero Decimal Not null,
+    Tipopago Decimal NOT null, 
+    PRIMARY KEY (Donardinero)
+    
+);
+CREATE TABLE Usuario_Donardinero (
+	Id_Usuario VARCHAR(50) NOT NULL ,
+    Donardinero Decimal Not null,
+    PRIMARY KEY (Id_Usuario, Donardinero),
+    FOREIGN KEY (Id_Usuario) REFERENCES usuario(Id_Usuario),
+    FOREIGN KEY (Donardinero) REFERENCES Donardinero(Donardinero)
+);
+CREATE TABLE Juegos (
+   Id_Juego VARCHAR(50) NOT NULL,
+   Nombre_Juego VARCHAR(50) NOT NULL,
+   Nivel varchar(50) Not Null, 
+   Puntos BIGINT,  
+   PRIMARY KEY (Id_Juego)
+
+);
+CREATE TABLE Usuario_juegos (
+   Id_Usuario VARCHAR(50) NOT NULL, 
+   Id_Juego VARCHAR(50) NOT NULL,
+   Raking BIGINT,  
+   PRIMARY KEY (Id_Usuario, Id_Juego),
+   FOREIGN KEY (Id_Juego) REFERENCES Juegos(Id_Juego)
+
+);
+CREATE TABLE Buscador (
+   Id_usuario VARCHAR(50) NOT NULL,
+   Buscador Bigint NOT NULL,  
+   PRIMARY KEY (Buscador)
+
+);
+CREATE TABLE Usuario_Buscador (
+   Id_Usuario VARCHAR(50) NOT NULL, 
+   Id_Buscador VARCHAR(50) NOT NULL,  
+   PRIMARY KEY (Id_Usuario, Id_Buscador),
+   FOREIGN KEY (Id_Usuario) REFERENCES usuario(Id_Usuario),
+   FOREIGN KEY (Id_Buscador) REFERENCES Buscador(Buscador)  
+);
