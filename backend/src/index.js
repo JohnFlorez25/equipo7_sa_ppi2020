@@ -8,8 +8,8 @@ app.use(express.json());
 
 const router = require ('./routes/routes');
 app.use('/api/', router);
-
+app.use(express.urlencoded({extended: false}))//analiza la url y la codifica
 app.use(morgan('dev'));
-app.listen(3000, ()=>{
+app.listen(3001, ()=>{
  console.log('Servidor ha sido iniciado'); 
 });
