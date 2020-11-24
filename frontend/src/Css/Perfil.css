@@ -1,14 +1,14 @@
 .Menu1{
-    transform:  translate(5%, 48%);
+    transform:  translate(5%, 260%);
 }
 .perfil1{
-    border-top:solid 2px grey;
-    transform:  translate(0%, -100%);
+    
+    transform:  translate(45%, -100%);
     
 } 
 .perfil2{
     background-image: url("../imagenes/Perfil1.png");
-    transform:  translate(300%, 0%);
+  
     height:70px;
     width:72px;
     border-radius: 50px;
@@ -27,7 +27,7 @@
 
 }
 .Cerrarsesion{
-    transform:  translate(-25%,-2930%);
+    transform:  translate(-290%,-330%);
     border-radius: 50px;
     font-size: 20px;
     outline: none;

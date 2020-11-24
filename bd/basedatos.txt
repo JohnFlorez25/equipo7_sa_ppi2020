@@ -1,71 +1,23 @@
-CREATE DATABASE Al_Volante;
+
+USE bhmcc4sdnh0dzta51lbc; 
 CREATE TABLE usuario ( 
-    Id_Usuario VARCHAR(50) NOT NULL , 
-    Id_Contrasena VARCHAR(50) NOT NULL , 
-    Id_Correo VARCHAR(50) NOT NULL , 
-    PRIMARY KEY (Id_Usuario) 
-);
-CREATE TABLE Donardinero (
-    Donardinero Decimal Not null,
-    Tipopago Decimal NOT null, 
-    PRIMARY KEY (Donardinero)
-    
-);
-CREATE TABLE Usuario_Donardinero (
-	Id_Usuario VARCHAR(50) NOT NULL , 
-    Donardinero Decimal Not null, 
-    PRIMARY KEY (Id_Usuario, Donardinero),
-    FOREIGN KEY (Id_Usuario) REFERENCES usuario(Id_Usuario),
-    FOREIGN KEY (Donardinero) REFERENCES Donardinero(Donardinero)
-);
-CREATE TABLE Juegos (
-   Id_Juego VARCHAR(50) NOT NULL,
-   Nombre_Juego VARCHAR(50) NOT NULL,
-   Nivel varchar(50) Not Null, 
-   Puntos BIGINT,  
-   PRIMARY KEY (Id_Juego)
-
-);
-CREATE TABLE Usuario_juegos (
-   Id_Usuario VARCHAR(50) NOT NULL, 
-   Id_Juego VARCHAR(50) NOT NULL,
-   Raking BIGINT,  
-   PRIMARY KEY (Id_Usuario, Id_Juego),
-   FOREIGN KEY (Id_Juego) REFERENCES Juegos(Id_Juego)
-
-);
-CREATE TABLE Buscador (
-   Id_usuario VARCHAR(50) NOT NULL,
-   Buscador Bigint NOT NULL,  
-   PRIMARY KEY (Buscador)
-
-);
-CREATE TABLE Usuario_Buscador (
-   Id_Usuario VARCHAR(50) NOT NULL, 
-   Id_Buscador VARCHAR(50) NOT NULL,  
-   PRIMARY KEY (Id_Usuario, Id_Buscador),
-   FOREIGN KEY (Id_Usuario) REFERENCES usuario(Id_Usuario),
-FOREIGN KEY (Id_Buscador) REFERENCES Buscador(Buscador) 
-);
----------------------------------
-USE bw3xkl5kn8od2ahnd72j;
-CREATE TABLE usuario ( 
-    Id_Usuario VARCHAR(50) NOT NULL , 
-    Id_Contrasena VARCHAR(50) NOT NULL , 
-    Id_Correo VARCHAR(50) NOT NULL , 
-    PRIMARY KEY (Id_Usuario) 
+    Id_usuario int, 
+    NombreUsuario VARCHAR(50) NOT NULL ,  
+    Apellidos VARCHAR(50) NOT NULL ,
+    Correo Varchar(50) NOT null, 
+   Contraseña VARCHAR(50) NOT NULL , 
+    PRIMARY KEY (Id_usuario) 
 );
 CREATE TABLE Donardinero (
     Donardinero Decimal Not null,
     Tipopago VARCHAR(50) NOT NULL , 
     PRIMARY KEY (Donardinero)
-    
 );
 CREATE TABLE Usuario_Donardinero (
-	Id_Usuario VARCHAR(50) NOT NULL , 
+    Id_usuario int, 
     Donardinero Decimal Not null, 
-    PRIMARY KEY (Id_Usuario, Donardinero),
-    FOREIGN KEY (Id_Usuario) REFERENCES usuario(Id_Usuario),
+    PRIMARY KEY (Id_usuario, Donardinero),
+    FOREIGN KEY (Id_usuario) REFERENCES usuario(Id_usuario),
     FOREIGN KEY (Donardinero) REFERENCES Donardinero(Donardinero)
 );
 CREATE TABLE Juegos (
@@ -74,26 +26,37 @@ CREATE TABLE Juegos (
    Nivel int Not Null, 
    Puntos BIGINT,  
    PRIMARY KEY (Id_Juego)
-
 );
 CREATE TABLE Usuario_juegos (
-   Id_Usuario VARCHAR(50) NOT NULL, 
+   Id_usuario int,  
    Id_Juego int NOT NULL,
    Raking BIGINT,  
-   PRIMARY KEY (Id_Usuario, Id_Juego),
+   PRIMARY KEY (Id_usuario, Id_Juego),
+   FOREIGN KEY (Id_usuario) REFERENCES usuario(Id_usuario),
    FOREIGN KEY (Id_Juego) REFERENCES Juegos(Id_Juego)
-
 );
 CREATE TABLE Buscador (
-   Id_usuario VARCHAR(50) NOT NULL,
+   Codigonorma int,
    Buscador  VARCHAR(50) NOT NULL,
    PRIMARY KEY (Buscador)
 
 );
 CREATE TABLE Usuario_Buscador (
-   Id_Usuario VARCHAR(50) NOT NULL, 
+   Id_usuario int,   
    Id_Buscador VARCHAR(50) NOT NULL,  
-   PRIMARY KEY (Id_Usuario, Id_Buscador),
-   FOREIGN KEY (Id_Usuario) REFERENCES usuario(Id_Usuario),
+   PRIMARY KEY (Id_usuario, Id_Buscador),
+   FOREIGN KEY (Id_usuario ) REFERENCES usuario(Id_usuario ),
 FOREIGN KEY (Id_Buscador) REFERENCES Buscador(Buscador) 
 );
+USE bhmcc4sdnh0dzta51lbc; 
+INSERT INTO usuario (Id_usuario, NombreUsuario, Apellidos, Correo, Contraseña)  VALUES (12,"Juan", "Suarez","brayanrepo2015@gmail.com","123456asd"); 
+USE bhmcc4sdnh0dzta51lbc
+INSERT INTO Donardinero (Donardinero, Tipopago) VALUES (12,"Paypal"); 
+USE bhmcc4sdnh0dzta51lbc;
+INSERT INTO Usuario_Donardinero (Donardinero, Id_usuario) VALUES (12, 12); 
+use bhmcc4sdnh0dzta51lbc;
+INSERT INTO Juegos (Id_Juego,Nivel,Nombre_Juego, Puntos) VALUES (1,1,"Normas de conducción", 12); 
+use bhmcc4sdnh0dzta51lbc;
+INSERT into Usuario_juegos (Id_Juego,Id_usuario, Raking) VALUES (1,12,1); 
+USE bhmcc4sdnh0dzta51lbc; 
+INSERT into Usuario_Buscador (Id_Buscador, Id_usuario) VALUES ("Carros destruidos", 12);

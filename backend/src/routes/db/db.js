@@ -1,9 +1,9 @@
 const mysql = require('mysql');
 const mysqlConnection = mysql.createConnection({
-host: 'bw3xkl5kn8od2ahnd72j-mysql.services.clever-cloud.com', //'barbmbyc2hpnnblvyy0t-mysql.services.clever-cloud.com',
-user: 'udltekenxjqy5drz',//'uwsmx2pbkf3pdzai', 
-password:'SVIW1lBnBQgkMXelKoAn',//'QQEvP78iYzt1lh9Igt2E',
-database: 'bw3xkl5kn8od2ahnd72j',//'barbmbyc2hpnnblvyy0t',
+host: 'bhmcc4sdnh0dzta51lbc-mysql.services.clever-cloud.com', 
+user: 'utsbckruw0lqyrk0',
+password:'FGkDVbTYeimSdGlqmnqg',
+database: 'bhmcc4sdnh0dzta51lbc',
 multiStatements: true
 }); 
 mysqlConnection.connect(function(err) {

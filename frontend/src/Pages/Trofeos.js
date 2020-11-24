@@ -32,7 +32,7 @@ class Trofeos extends Component {
             <p>TROFEOS</p> 
             <br/>
             
-            
+            <div className="movertitulos">
             <div className="Trofeo1"> 
             <p className="texto1">¡SE EL PRIMERO!
             <br/>
@@ -66,20 +66,20 @@ class Trofeos extends Component {
             de jugar "señales de transito"
             </p>
             </div>
-            <br/>
+            </div>
             <div className="Barra">
             <button className="Menu" onClick={()=>this.Pantallaprincipal()}></button>
-            <br/>
+            
             <button className="Trofeos" onClick={()=>this.Trofeos()}></button>
-            <br/>
+            
             <button className="Raking" onClick={()=>this.Raking()}></button>
-            <br/>
+            
             <button className="Perfil" onClick={()=>this.Perfil()}></button>
-            <br/>
+            
             <button className="Donaciones" onClick={()=>this.Donaciones()}></button>
-            <br/>
+            
             <button className="Busqueda" onClick={() => this.Busqueda()}></button>
-            <br/>
+            
             </div>
             </div>
             </header>

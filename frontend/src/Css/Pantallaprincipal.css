@@ -34,7 +34,7 @@
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    transform:  translate(-300%, -110%);
+    /*transform:  translate(-300%, -110%);*/
     
     border-color: rgb(5, 5, 5);
 }
@@ -44,7 +44,7 @@
     height:100px;
     width:70px;
     background-position:center;
-    transform:  translate(-200%, -234%);
+    transform:  translate(-30%);
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 10px;
@@ -62,7 +62,7 @@
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    transform:  translate(-100%, -358%);
+    transform:  translate(-60%);
     border-color: rgb(5, 5, 5);
 }
 .Perfil{
@@ -75,7 +75,7 @@
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    transform:  translate(-3%, -482%);
+    transform:  translate(-94%);
     border-color: rgb(5, 5, 5);
 }
 .Donaciones{
@@ -88,7 +88,7 @@
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    transform:  translate(100%, -606%);
+    transform:  translate(-134%);
     border-color: rgb(5, 5, 5);
 }
 .Busqueda{
@@ -101,10 +101,10 @@
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    transform:  translate(193%, -730%);
+    transform:  translate( -160%);
     border-color: rgb(5, 5, 5);
 }
 
 .Barramenu{
-    transform:  translate(5%, -1%);
+    transform:  translate(3%, -30%);
 }

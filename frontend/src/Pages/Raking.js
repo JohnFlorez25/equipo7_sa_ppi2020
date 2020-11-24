@@ -40,19 +40,19 @@ class Trofeos extends Component {
                 </p>
             </div>
             <div className="Trofeo5"></div>
-            <div className="Menu1">
+            <div className="Menu0">
             <button className="Menu" onClick={()=>this.Pantallaprincipal()}></button>
-            <br/>
+            
             <button className="Trofeos" onClick={()=>this.Trofeos()}></button>
-            <br/>
+            
             <button className="Raking" onClick={()=>this.Raking()}></button>
-            <br/>
+            
             <button className="Perfil" onClick={()=>this.Perfil()}></button>
-            <br/>
+            
             <button className="Donaciones" onClick={()=>this.Donaciones()}></button>
-            <br/>
+            
             <button className="Busqueda" onClick={() => this.Busqueda()}></button>
-            <br/>
+            
             </div>
             </div>
             </header>

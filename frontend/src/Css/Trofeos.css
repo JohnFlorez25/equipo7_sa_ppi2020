@@ -11,7 +11,10 @@
     
   }
 .Barra{
-    transform:  translate(5%, -20%);
+    transform:  translate(5%, -100%);
+}
+.movertitulos{
+    transform:  translate(33%, 0%);
 }
 .Trofeo1{
     
