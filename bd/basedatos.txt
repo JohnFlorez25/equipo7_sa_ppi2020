@@ -1,7 +1,7 @@
 
 USE bhmcc4sdnh0dzta51lbc; 
 CREATE TABLE usuario ( 
-    Id_usuario int, 
+    Id_usuario int AUTO_INCREMENT, 
     NombreUsuario VARCHAR(50) NOT NULL ,  
     Apellidos VARCHAR(50) NOT NULL ,
     Correo Varchar(50) NOT null, 
@@ -48,15 +48,17 @@ CREATE TABLE Usuario_Buscador (
    FOREIGN KEY (Id_usuario ) REFERENCES usuario(Id_usuario ),
 FOREIGN KEY (Id_Buscador) REFERENCES Buscador(Buscador) 
 );
-USE bhmcc4sdnh0dzta51lbc; 
-INSERT INTO usuario (Id_usuario, NombreUsuario, Apellidos, Correo, Contraseña)  VALUES (12,"Juan", "Suarez","brayanrepo2015@gmail.com","123456asd"); 
-USE bhmcc4sdnh0dzta51lbc
+USE bgdv0xohcwrkpsgznz7h; 
+INSERT INTO usuario ( NombreUsuario, Apellidos, Correo, Contraseña)  VALUES ("Juan", "Suarez","brayanrepo2015@gmail.com","123456asd"); 
+use bgdv0xohcwrkpsgznz7h; 
 INSERT INTO Donardinero (Donardinero, Tipopago) VALUES (12,"Paypal"); 
-USE bhmcc4sdnh0dzta51lbc;
-INSERT INTO Usuario_Donardinero (Donardinero, Id_usuario) VALUES (12, 12); 
-use bhmcc4sdnh0dzta51lbc;
+USE bgdv0xohcwrkpsgznz7h;
+INSERT INTO Usuario_Donardinero (Donardinero, Id_usuario) VALUES (12, 2); 
+use bgdv0xohcwrkpsgznz7h;
 INSERT INTO Juegos (Id_Juego,Nivel,Nombre_Juego, Puntos) VALUES (1,1,"Normas de conducción", 12); 
-use bhmcc4sdnh0dzta51lbc;
-INSERT into Usuario_juegos (Id_Juego,Id_usuario, Raking) VALUES (1,12,1); 
-USE bhmcc4sdnh0dzta51lbc; 
-INSERT into Usuario_Buscador (Id_Buscador, Id_usuario) VALUES ("Carros destruidos", 12);
+use bgdv0xohcwrkpsgznz7h;
+INSERT into Usuario_juegos (Id_Juego,Id_usuario, Raking) VALUES (1,2,1); 
+USE bgdv0xohcwrkpsgznz7h; 
+INSERT into Buscador (Codigonorma, Buscador) VALUES (12, "Doble via");
+USE bgdv0xohcwrkpsgznz7h; 
+INSERT into Usuario_Buscador (Id_Buscador, Id_usuario) VALUES ("Doble via", 2);

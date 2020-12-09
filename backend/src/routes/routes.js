@@ -5,7 +5,7 @@ const mysqlConnection = require('./db/db');
  //=================================================usuario
 router.get('/usuario', (req, res)=>{
     mysqlConnection.query('SELECT * FROM usuario', (err, rows, fields)=>{
-        if(!err){
+        if(!err){ 
             res.json(rows);
         }else{
             console.log(err); 
@@ -13,10 +13,10 @@ router.get('/usuario', (req, res)=>{
     });
 });
 router.post('/nuevo_usuario', (req, res) =>{
-    const {Id_usuario,NombreUsuario,Apellidos,Correo,Contraseña} = req.body
-    let usuario = [Id_usuario,NombreUsuario,Apellidos,Correo,Contraseña];
-    let nuevousuario = `INSERT INTO usuario(Id_usuario,NombreUsuario,Apellidos,Correo,Contraseña)
-    VALUES(?,?,?,?,?);`
+    const {NombreUsuario,Apellidos,Correo,Contraseña} = req.body
+    let usuario = [NombreUsuario,Apellidos,Correo,Contraseña];
+    let nuevousuario = `INSERT INTO usuario(NombreUsuario,Apellidos,Correo,Contraseña)
+    VALUES(?,?,?,?);`
     mysqlConnection.query(nuevousuario, usuario, (err, results, fields) =>{
         if(err){
             return console.error(err.message);
@@ -24,18 +24,18 @@ router.post('/nuevo_usuario', (req, res) =>{
         res.json({message:` usuario ingresado`}); 
     }); 
 });
-router.put('/cambio_usuario/:Id', (req,res)=>{
+/*router.put('/cambio_usuario/:Id_usuario', (req,res)=>{
     const {Id_usuario,NombreUsuario,Apellidos,Correo,Contraseña} = req.body
-    const { Id }=req.params;
+    const { Id_usuario }=req.params;
     mysqlConnection.query(`UPDATE usuario SET  NombreUsuario = ?, Apellidos = ? Correo= ?, Contraseña=? WHERE Id_usuario = ?`,
-    [NombreUsuario,Apellidos,Correo,Contraseña,Id], (err, rows, fields)=>{
+    [NombreUsuario,Apellidos,Correo,Contraseña,Id_usuario], (err, rows, fields)=>{
        if(!err){
            res.json({status: 'usuario actualizado'});
        }else{
            console.log(err);
        } 
     });
-});
+});*/
 router.delete('/eliminar_usuario/:id', (req,res)=>{
     const {id}=req.params;
     mysqlConnection.query(`DELETE FROM usuario WHERE Id_Usuario = ? `,
@@ -225,6 +225,5 @@ router.post('/buscador1', (req, res) =>{
         res.json({message:`Historial`}); 
     }); 
 });
-
 
 module.exports=router; 

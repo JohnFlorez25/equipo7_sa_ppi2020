@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../Css/Normasconduccion.css'; 
 class Normasconduccion extends Component {
     nivel1=()=>{
-        alert('En construcción');
+        window.location.href="./informacion"; 
     }
     nivel2=()=>{
         alert('En construcción');

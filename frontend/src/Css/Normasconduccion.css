@@ -53,3 +53,41 @@
 .Regresar:active{
     outline: none;
 }
+.Pregunta1{
+    font-size:35px;
+    text-align: center;
+    padding: 10px;
+}
+.N2{
+    margin: 0;
+    font-size: 60px;
+    text-align: center;
+    border-radius: 50px;
+
+   }
+   .btn1{
+    height:69px;
+    width: 50%;
+    transform:  translate(400px, 0px);
+    border-radius: 50px;
+  }
+  .btn2{
+    height:69px;
+    width: 50%;
+    transform:  translate(400px, 0px);
+    border-radius: 50px;
+  }
+  
+  .btn3{
+    height:69px;
+    width: 50%;
+    transform:  translate(400px, 0px);
+    border-radius: 50px;
+  }
+  .btn4{
+    height:69px;
+    width: 50%;
+    transform:  translate(400px, 0px);
+    border-radius: 50px;
+  }
+ 

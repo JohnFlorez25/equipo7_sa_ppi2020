@@ -5,7 +5,7 @@ const cookies = new Cookies();
 class Pantallaprincipal extends Component {
     
     componentDidMount(){
-        if(!cookies.get('correo' && 'contraseña')){
+        if(!cookies.get('Correo' && 'Contraseña')){
             window.location.href="./Inicio"; 
         }
     }
@@ -37,12 +37,11 @@ class Pantallaprincipal extends Component {
 
     }
     render() {
-        console.log('id: '+cookies.get('id'));
-        console.log('apellidos: ' +cookies.get('apellido_Paterno'));
-        console.log('nombre: ' +cookies.get('nombre'));
-        console.log('correo: ' +cookies.get('nombre'));
-        console.log('username: ' +cookies.get('username'));
-        console.log('contraseña: ' +cookies.get('contraseña'));
+        console.log('Id_usuario: '+cookies.get('Id_usuario'));
+        console.log('NombreUsuario: ' +cookies.get('NombreUsuario'));
+        console.log('Apellidos: ' +cookies.get('Apellidos'));
+        console.log('Correo: ' +cookies.get('Correo'));
+        console.log('Contraseña: ' +cookies.get('Contraseña'));
 
         return (
             <header className="Pantalla">

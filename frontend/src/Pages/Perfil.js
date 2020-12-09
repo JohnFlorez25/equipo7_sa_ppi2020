@@ -7,12 +7,11 @@ const cookies = new Cookies();
 
 class Perfil extends Component {
     CerrarSesion = () => {
-        cookies.remove('id', { path: "/" });
-        cookies.remove('apellidos', { path: "/" });
-        cookies.remove('nombre ', { path: "/" });
-        cookies.remove('correo ', { path: "/" });
-        cookies.remove('username ', { path: "/" });
-        cookies.remove('contraseña ', { path: "/" });
+        cookies.remove('Id_usuario', { path: "/" });
+        cookies.remove('NombreUsuario', { path: "/" });
+        cookies.remove('Apellidos ', { path: "/" });
+        cookies.remove('Correo ', { path: "/" });
+        cookies.remove('Contraseña ', { path: "/" });
 
         window.location.href = './Inicio';
     }

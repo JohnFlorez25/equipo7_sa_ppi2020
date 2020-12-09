@@ -2,18 +2,17 @@ import React, { Component } from 'react';
 import '../Css/Inicio.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
-import md5 from 'md5';
 import Cookies from 'universal-cookie';
 
-const baseUrl = "http://localhost:3001/usuario";
+const baseUrl = "http://localhost:3001/api/usuario";
 const cookies=new Cookies(); 
 
 class Inicio extends Component {
     state = {
         form: {
-            username: '', //Correo: brayan repo2015@gmail.com contraseña: 123456789 
-            password: ''//Correo: Yereimisanchez@gmail.com contraseña: 12345
-        }
+            Correo: '', 
+            Contraseña: ''
+        } 
     }
     handleChange = async e => {
         await this.setState({
@@ -24,24 +23,24 @@ class Inicio extends Component {
         });
     }
     iniciarSesion = async () => {
-        await axios.get(baseUrl, { params: { correo: this.state.form.correo, contraseña: md5(this.state.form.contraseña) } })
+        await axios.get(baseUrl, { params: { Correo: this.state.form.Correo, Contraseña: this.state.form.Contraseña } })
             .then(response => {
                 return response.data; //Se retorna
+                 
             })
             /**Aquí se evidencia las cookies*/
             .then(response => {
                 // Usamos lo que se retorna
                 if (response.length > 0) {
-                    //Significa que la longitud de response si es mayor a 0 podra iniciarse sección 
+                    //Significa que la longitud de response si es mayor a 0 podra iniciarse sesión 
                     // o sea que inicio con los datos correctos 
                     var respuesta = response[0];
-                    cookies.set('id', respuesta.id, {path: "/"});
-                    cookies.set('apellidos', respuesta.apellidos, {path: "/"});
-                    cookies.set('nombre', respuesta.nombre, {path: "/"});
-                    cookies.set('correo', respuesta.correo, {path: "/"});
-                    cookies.set('username', respuesta.username, {path: "/"});
-                    cookies.set('contraseña', respuesta.contraseña, {path: "/"});
-                    alert(`Bienvenido ${respuesta.nombre} ${respuesta.apellidos}` );
+                    cookies.set('Id_usuario', respuesta.Id_usuario, {path: "/"});
+                    cookies.set('NombreUsuario', respuesta.NombreUsuario, {path: "/"});
+                    cookies.set('Apellidos', respuesta.Apellidos, {path: "/"});
+                    cookies.set('Correo', respuesta.Correo, {path: "/"});
+                    cookies.set('Contraseña', respuesta.Contraseña, {path: "/"});
+                    alert(`Bienvenido ${respuesta.NombreUsuario} ${respuesta.Apellidos}` );
                 window.location.href="./Pantallaprincipal"; 
                 } else {
                     alert('El usuario o contraseña estan incorrectas');
@@ -52,7 +51,7 @@ class Inicio extends Component {
             })
     }
     componentDidMount(){
-        if(cookies.get('correo' && 'contraseña')){
+        if(cookies.get('Correo' && 'Contraseña')){
             window.location.href="./Pantallaprincipal";
         }
     }
@@ -72,20 +71,18 @@ class Inicio extends Component {
                             className="form-control"
                             placeholder="Correo" /*"placeholder" Sirve para pone el nombre dentro del
                             cuadro*/
-                            name="correo"
+                            name="Correo"
                             onChange={this.handleChange} />
-
                         <br />
                         <input
                             type="password"
                             className="form-control"
                             placeholder="Contraseña"
-                            name="contraseña"
+                            name="Contraseña"
                             onChange={this.handleChange} />
-                        <br />
-                        
+                        <br />              
                         <button className="btn btn-primary" onClick={() => this.iniciarSesion()}>ENTRAR</button>
-                        <div className="Registrarse">
+                        <div className="RegiclassName">
                         <button className="btn btn-primary" onClick={()=> this.crearcuenta()}>CREAR CUENTA</button>
                         </div>
                     </div>

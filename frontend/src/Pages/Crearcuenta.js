@@ -2,18 +2,19 @@ import React, { Component } from 'react';
 import '../Css/App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
-import md5 from 'md5';
+
 import Cookies from 'universal-cookie';
 
-const baseUrl = "http://localhost:3001/usuario";
+const baseUrl = "http://localhost:3001/api/nuevo_usuario";
 const cookies = new Cookies();
 class Crearcuenta extends Component {
     state = {
         form: {
-            username: '', //Nombre: Brayan, Apellidos: Suárez Restrepo, Correo: brayanrepo2015@gmail.com contraseña: 123456789
-            apellidos: '', //Nombre: Yereimi, Apellidos: Sanchez Rodas, Correo: Yereimisanchez@gmail.com contraseña: 12345
-            correo: '',
-            password: '',
+            
+            NombreUsuario: '', 
+            Apellidos: '',
+            Correo: '',
+            Contraseña: '',
         }
     }
     handleChange = async e => {
@@ -24,15 +25,23 @@ class Crearcuenta extends Component {
             }
         });
     }
+    /*pantallaprincipal=async()=>{
+        await axios.post(baseUrl, this.state.form).then(response=>{
+            this.iniciarSesion();
+        }).catch(err=>{
+            console.log(error.message); 
+        })
+    }*/
     pantallaprincipal = async () => {
-        await axios.get(baseUrl, { params: { 
-            nombre: this.state.form.nombre, 
-            apellidos: this.state.form.apellidos, 
-            correo: this.state.form.correo, 
-            contraseña: md5(this.state.form.contraseña) } })
+        await axios.post(baseUrl, { params: { 
+            NombreUsuario: this.state.form.NombreUsuario, 
+            Apellidos: this.state.form.Apellidos, 
+            Correo: this.state.form.Correo, 
+            Contraseña: this.state.form.Contraseña } })
             .then(response => {
                 return response.data; //Se retorna
             })
+
             /**Aquí se evidencia las cookies*/
             .then(response => {
                 // Usamos lo que se retorna
@@ -40,13 +49,12 @@ class Crearcuenta extends Component {
                     //Significa que la longitud de response si es mayor a 0 podra iniciarse sección 
                     // o sea que inicio con los datos correctos 
                     var respuesta = response[0];
-                    cookies.set('id', respuesta.id, {path: "/"});
-                    cookies.set('apellidos', respuesta.apellidos, {path: "/"});
-                    cookies.set('nombre', respuesta.nombre, {path: "/"});
-                    cookies.set('correo', respuesta.correo, {path: "/"});
-                    cookies.set('username', respuesta.username, {path: "/"});
-                    cookies.set('contraseña', respuesta.contraseña, {path: "/"});
-                    alert(`Bienvenido ${respuesta.nombre} ${respuesta.apellidos}` );
+                    
+                    cookies.set('NombreUsuario', respuesta.NombreUsuario, {path: "/"});
+                    cookies.set('Apellidos', respuesta.Apellidos, {path: "/"});
+                    cookies.set('Correo', respuesta.Correo, {path: "/"});
+                    cookies.set('Contraseña', respuesta.Contraseña, {path: "/"});
+                    alert(`Bienvenido ${respuesta.NombreUsuario} ${respuesta.Apellidos}` );
                 window.location.href="./Pantallaprincipal"; 
                 } else {
                     alert('El usuario o contraseña estan incorrectas');
@@ -57,7 +65,7 @@ class Crearcuenta extends Component {
             })
     }
     componentDidMount(){
-        if(cookies.get('nombre' && 'apellidos' && 'correo' && 'contraseña')){
+        if(cookies.get('NombreUsuario' && 'Apellidos' && 'Correo' && 'Contraseña')){
             window.location.href="./Pantallaprincipal";
         }
     }
@@ -78,7 +86,7 @@ class Crearcuenta extends Component {
                             className="form-control"
                             placeholder="Nombre(s)" /*"placeholder" Sirve para pone el nombre dentro del
                             cuadro*/
-                            name="nombre"
+                            name="NombreUsuario"
                             onChange={this.handleChange} />
 
                         <br />
@@ -86,21 +94,21 @@ class Crearcuenta extends Component {
                             type="text"
                             className="form-control"
                             placeholder="Apellido(s)"
-                            name="apellidos"
+                            name="Apellidos"
                             onChange={this.handleChange} />
                         <br />
                         <input
                             type="text"
                             className="form-control"
                             placeholder="Correo"
-                            name="correo"
+                            name="Correo"
                             onChange={this.handleChange} />
                         <br />
                         <input
                             type="password"
                             className="form-control"
                             placeholder="Contraseña"
-                            name="contraseña"
+                            name="Contraseña"
                             onChange={this.handleChange} />
                         <br />
                         <button className="btn btn-primary" onClick={() => this.pantallaprincipal()} >CREAR CUENTA</button>
